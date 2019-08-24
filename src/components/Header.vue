@@ -1,14 +1,13 @@
 <template lang="pug">
-div
-  transition(name="scroll")
-    .header(v-show="show")
-      .content
-        .title
-          | Portfolio
-        .section
-          div Profile
-          div History
-          div Products
+transition(name="scroll")
+  .header(v-if="show")
+    .content
+      .title
+        | Portfolio
+      .section
+        div Profile
+        div History
+        div Products
 </template>
 
 <script>
@@ -32,9 +31,14 @@ export default {
 
 <style scoped lang="scss">
 .header {
-  margin: 1.5rem auto 0;
+  position: absolute;
+  top: 1.5rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
   padding: 1rem 2rem;
   width: 75%;
+  background-color: #fff;
   border-radius: 16px;
   box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
 }
