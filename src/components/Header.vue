@@ -1,7 +1,7 @@
 <template lang="pug">
 div
   transition(name="scroll")
-    .header(v-if="show")
+    .header(v-show="show")
       .content
         .title
           | Portfolio
@@ -25,7 +25,7 @@ export default {
     }
   },
   mounted: function() {
-    this.display();
+    setTimeout(this.display, 500);
   }
 };
 </script>
