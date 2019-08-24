@@ -31,7 +31,7 @@ export default {
 
 <style scoped lang="scss">
 .header {
-  position: absolute;
+  position: fixed;
   top: 1.5rem;
   left: 0;
   right: 0;
