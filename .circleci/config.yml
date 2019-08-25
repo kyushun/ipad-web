@@ -1,0 +1,25 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/portfolio
+    docker:
+      - image: circleci/node:10.16.3
+    steps:
+      - checkout
+
+      - run: git reset --hard HEAD
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+            - v1-dependencies-
+      - run: yarn install
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+      - run: yarn build
+      - run: git config user.email "27068326+kyushun@users.noreply.github.com"
+      - run: git config user.name "kyushun"
+      - run: git add -A
+      - run: git commit -m '[CI]Auto Build'
+      - run: git push origin master;
