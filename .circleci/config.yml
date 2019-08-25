@@ -4,6 +4,8 @@ jobs:
     working_directory: ~/portfolio
     docker:
       - image: circleci/node:10.16.3
+        environment:
+          TZ: Asia/Tokyo
     steps:
       - checkout
 
@@ -21,5 +23,5 @@ jobs:
       - run: git config user.email "27068326+kyushun@users.noreply.github.com"
       - run: git config user.name "kyushun"
       - run: git add -A
-      - run: git commit -m '[CI]Auto Build'
-      - run: git push origin master;
+      - run: npm version patch -m "[ci skip] Auto Build at `date +"%Y%m%d-%H%M%S"`"
+      - run: git push origin master --follow-tags;
