@@ -12,6 +12,13 @@
             | 急な来客でも焦る必要はありません。
             br
             | office echo が今の会議室の使用状況をわかりやすく表示。お客様を長時間待たせることはもうありません。
+      .t-top
+        .text
+          .title
+            | テーブルモードでは、会議室・天気・鉄道の遅延情報が閲覧できます。
+            br
+            | Google Nest Hub や Amazon Echo Show のオフィス利用を想定して開発されました。
+        img(src="/img/roomee/t_top.png")
     .pv
       .content
         | PV
@@ -50,9 +57,12 @@ export default {
 
 <style scoped lang="scss">
 .roomee {
-  .desc1 {
+  // 共通部分
+  .desc1,
+  .t-top {
     display: flex;
     flex-wrap: wrap;
+    align-items: flex-start;
     @include mq() {
       flex-wrap: nowrap;
     }
@@ -60,18 +70,13 @@ export default {
     img {
       margin: 0 auto;
       max-width: 100%;
-      order: 2;
       @include mq() {
-        margin: 0 2rem 0 -25%;
         max-width: 75%;
-        order: 1;
       }
     }
 
     .text {
       margin: 0 auto;
-      color: $color-black;
-      order: 1;
       text-align: center;
       @include mq() {
         text-align: left;
@@ -82,12 +87,49 @@ export default {
         font-size: 3rem;
         font-weight: 800;
         line-height: 3.4rem;
-        background: rgb(135, 226, 240);
-        background-image: url("/img/bg/portage.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         background-clip: text;
         -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+
+  // 個別部分
+  .desc1 {
+    img {
+      order: 2;
+      @include mq() {
+        margin: 0 2rem 0 -25%;
+        order: 1;
+      }
+    }
+
+    .text {
+      order: 1;
+
+      .title {
+        background-image: url("/img/bg/portage.jpg");
+      }
+    }
+  }
+
+  .t-top {
+    margin-top: 10rem;
+
+    .text {
+      order: 1;
+
+      .title {
+        background-image: url("/img/bg/portage.jpg");
+      }
+    }
+
+    img {
+      order: 2;
+      @include mq() {
+        margin: 0 -25% 0 2rem;
+        order: 1;
       }
     }
   }
