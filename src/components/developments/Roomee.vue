@@ -57,6 +57,8 @@ export default {
 
 <style scoped lang="scss">
 .roomee {
+  overflow: hidden;
+
   // 共通部分
   .desc1,
   .t-top {
@@ -135,11 +137,11 @@ export default {
   }
 
   .pv {
-    margin-top: 4rem;
+    padding: 2rem 0;
     color: $color-black;
     font-size: 2.5rem;
     font-weight: 700;
-    background-image: url("/img/bg/royal-heath.jpg");
+    background-image: url("/img/bg/sky-blue.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 
