@@ -17,7 +17,7 @@
         | PV
         .video-wrapper
           img.play-btn(src="/img/play-button.svg" v-if="!pvPlaying" v-on:click="playPV")
-          video(poster="/img/bg/royal-heath.jpg" src="/img/roomee/pv.mp4" v-play="pvPlaying" controlsList="nodownload")
+          video(poster="/img/roomee/pv-sc.jpg" src="/img/roomee/pv.mp4" v-play="pvPlaying" controlsList="nodownload")
 </template>
 
 <script>
