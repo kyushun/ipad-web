@@ -16,7 +16,8 @@
       .content
         | PV
         .video-wrapper
-          img.play-btn(src="/img/play-button.svg" v-if="!pvPlaying" v-on:click="playPV")
+          .play-btn(v-if="!pvPlaying" v-on:click="playPV")
+            img(src="/img/play-button.svg")
           video(poster="/img/roomee/pv-sc.jpg" src="/img/roomee/pv.mp4" v-play="pvPlaying" controlsList="nodownload")
 </template>
 
@@ -104,12 +105,32 @@ export default {
       position: relative;
 
       .play-btn {
+        cursor: pointer;
         position: absolute;
-        width: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.75rem;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        border-radius: 50%;
+        border: solid 2px #409eff;
+        background: white;
+        opacity: 0.7;
+        filter: alpha(opacity=70);
+        transition: all 0.25s;
         z-index: 99;
+
+        &:hover {
+          opacity: 1;
+          filter: alpha(opacity=100);
+        }
+
+        img {
+          padding: 0.2rem 0 0.2rem 0.4rem;
+          width: 3rem;
+        }
       }
 
       video {
