@@ -5,6 +5,12 @@
         | office echo
         .detail
           | フルスタック開発の会議室サイネージシステム
+      .logos
+        img(src="/img/logos/javascript.svg")
+        img(src="/img/logos/es6.svg")
+        img(src="/img/logos/nodejs.svg")
+        img(src="/img/logos/react.svg")
+        img(src="/img/logos/socketio.svg")
       .desc1
         img(src="/img/roomee/s_top.png")
         .text
@@ -58,6 +64,18 @@ export default {
 <style scoped lang="scss">
 .roomee {
   overflow: hidden;
+
+  .logos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: -2rem auto 2rem;
+    max-width: 800px;
+
+    img {
+      height: 48px;
+    }
+  }
 
   // 共通部分
   .desc1,
