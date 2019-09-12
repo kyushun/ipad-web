@@ -55,35 +55,4 @@ export default {
   max-height: 900px;
   text-align: center;
 }
-
-#product {
-  .list {
-    display: flex;
-    flex-wrap: wrap;
-    @include mq() {
-      flex-wrap: nowrap;
-    }
-
-    .card {
-      box-flex: 1;
-      margin: 0.5rem 1rem;
-      padding: 1rem 2rem;
-      width: 100%;
-      text-align: center;
-      font-weight: 300;
-      border-radius: 4px;
-      border: solid 1px #eee;
-      transition: all 0.25s;
-
-      &:hover {
-        box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
-      }
-
-      .title {
-        margin: 0 0 0.5rem;
-        font-weight: 500;
-      }
-    }
-  }
-}
 </style>

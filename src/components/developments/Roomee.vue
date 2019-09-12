@@ -58,7 +58,7 @@ export default {
 
     img {
       margin: 0 auto;
-      max-width: 80%;
+      max-width: 100%;
       order: 2;
       @include mq() {
         margin: 0 2rem 0 -25%;
@@ -69,12 +69,10 @@ export default {
 
     .text {
       margin: 0 auto;
-      padding: 0 2rem;
       color: $color-black;
       order: 1;
       text-align: center;
       @include mq() {
-        padding: 0;
         text-align: left;
       }
 

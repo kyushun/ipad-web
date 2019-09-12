@@ -36,9 +36,14 @@ body {
 .content-wrapper {
   .content {
     margin: 0 auto;
-    padding: 4rem 0 5rem;
+    padding: 4rem 2rem 5rem;
     max-width: 1200px;
     color: $color-white;
+
+    @include mq(xl) {
+      padding-left: 0;
+      padding-right: 0;
+    }
 
     .header {
       margin-bottom: 4rem;

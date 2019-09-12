@@ -43,7 +43,6 @@ export default {
 
   .section {
     position: relative;
-    margin: 0 2rem;
     padding: 2rem 2rem;
     display: flex;
 
