@@ -1,27 +1,27 @@
 <template lang="pug">
   .wrapper
-    #profile.section
-      .name
-        .detail
-          | Tokyo Denki University
-          br
-          | pixiv Inc.
-        | Yushun
-        br
-        | Kotani
-      img.portrait(src="../assets/portrait.png")
-    #jobs.section
-      .header Job History
-      JobHistories
+    Profile#profile.section
+    JobHistories#jobs.section
+    //.section.content-wrapper
+      .content
+        .header
+          | Developments
+    Roomee.section
+    //#development.section
+      .header Development
 </template>
 
 <script>
+import Profile from "./Profile";
 import JobHistories from "./JobHistories";
+import Roomee from "./developments/Roomee";
 
 export default {
   name: "Content",
   components: {
-    JobHistories
+    Profile,
+    JobHistories,
+    Roomee
   }
 };
 </script>
@@ -29,46 +29,31 @@ export default {
 <style scoped lang="scss">
 .wrapper {
   margin: 110px auto 0;
-  max-width: 1200px;
+  //max-width: 1200px;
 }
 
 .section {
-  & + & {
-    margin-top: 3rem;
+  & + .section {
+    border-top: solid 1px #eee;
   }
 
   .header {
-    margin: 1rem 0;
-    font-size: 2rem;
+    margin-bottom: 4rem;
+    padding-bottom: 1.5rem;
+    color: $color-black;
+    font-size: 1.5rem;
     text-align: center;
+    border-bottom: solid 1px rgba(86, 86, 86, 0.25);
   }
 }
 
 #profile {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-
-  .name {
-    margin: 0 4rem;
-    text-align: center;
-    font-size: 5rem;
-    font-weight: bold;
-    line-height: 5rem;
-
-    .detail {
-      margin: 1rem 0;
-      font-size: 1.5rem;
-      line-height: 2rem;
-    }
-  }
-
-  .portrait {
-    margin: 0 4rem;
-    max-height: 700px;
-    max-width: 90vw;
-  }
+  height: calc(100vh - 110px);
+  max-height: 900px;
+  text-align: center;
 }
 
 #product {
