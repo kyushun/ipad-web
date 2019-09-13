@@ -1,8 +1,22 @@
 <template lang="pug">
-  .jobs.content-wrapper
+  .careers.content-wrapper
     .content
       .header
-        | Job History
+        | Career
+      .section.bg-tdu
+        .descript
+          .title
+            | 東京電機大学 未来科学部 情報メディア学科
+          .year
+            | 2016/04 -
+          .detail
+            | 将来、Web を通じたインタラクティブメディアが注目されると考え Web 開発を中心に学習を始める。
+            br
+            | 同年10月より実社会で通用する技術者になるべく、株式会社アーバンフューネスにて SE のアルバイトを始める。
+            br
+            | 2019年4月にはさらなる一歩を踏み出すべく大学を半年間休学し、ピクシブ株式会社にて正社員と同等の勤務日数・仕事を遂行。
+            br
+            | 2021年3月 卒業予定。
       .section.bg-urban
         .descript
           .title
@@ -22,7 +36,7 @@
           .title
             | ピクシブ株式会社 クリエーター事業部
           .year
-            | 2016/10 - 2019/05
+            | 2019/05 -
           .detail
             | ピクシブ株式会社 クリエーター事業部 にてアルバイトとして勤務
             br
@@ -33,12 +47,12 @@
 
 <script>
 export default {
-  name: "JobHistories"
+  name: "Careers"
 };
 </script>
 
 <style scoped lang="scss">
-.jobs {
+.careers {
   color: $color-black !important;
 
   .section {
@@ -69,8 +83,12 @@ export default {
       z-index: -1;
     }
 
+    &.bg-tdu::before {
+      background-image: url("/img/bg/pale-cornflower-blue.jpg");
+    }
+
     &.bg-urban::before {
-      background-image: url("/img/bg/mauve.jpg");
+      background-image: url("/img/bg/prim.jpg");
     }
 
     &.bg-pixiv::before {

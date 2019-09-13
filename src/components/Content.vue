@@ -1,7 +1,7 @@
 <template lang="pug">
   .wrapper
     Profile#profile.section
-    JobHistories#jobs.section
+    Careers#career.section
     //.section.content-wrapper
       .content
         .header
@@ -13,14 +13,14 @@
 
 <script>
 import Profile from "./Profile";
-import JobHistories from "./JobHistories";
+import Careers from "./Careers";
 import Roomee from "./developments/Roomee";
 
 export default {
   name: "Content",
   components: {
     Profile,
-    JobHistories,
+    Careers,
     Roomee
   }
 };

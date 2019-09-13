@@ -7,8 +7,8 @@ transition(name="scroll")
       .section
         a(href="#profile" v-smooth-scroll="{ offset: -110 }")
           div Profile
-        a(href="#jobs" v-smooth-scroll)
-          div Job History
+        a(href="#career" v-smooth-scroll)
+          div Career
         a(href="#roomee" v-smooth-scroll)
           div Development
 </template>
