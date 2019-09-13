@@ -6,7 +6,7 @@
       .content
         .header
           | Developments
-    Roomee.section
+    Roomee#roomee.section
     //#development.section
       .header Development
 </template>

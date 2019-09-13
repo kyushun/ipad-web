@@ -5,9 +5,12 @@ transition(name="scroll")
       .title
         | Portfolio
       .section
-        div Profile
-        div History
-        div Development
+        a(href="#profile" v-smooth-scroll)
+          div Profile
+        a(href="#jobs" v-smooth-scroll)
+          div Job History
+        a(href="#roomee" v-smooth-scroll)
+          div Development
 </template>
 
 <script>
@@ -36,7 +39,7 @@ export default {
   left: 0;
   right: 0;
   margin: 0 auto;
-  padding: 1rem 2rem;
+  padding: 0.5rem 2rem;
   width: 75%;
   background-color: #fff;
   border-radius: 16px;
@@ -49,15 +52,30 @@ export default {
   justify-content: space-between;
 
   .title {
+    padding: 0.5rem 1rem;
     font-weight: bold;
   }
 
   .section {
-    display: flex;
+    display: none;
+    overflow-x: auto;
 
-    div {
-      padding: 0 1rem;
+    @include mq() {
+      display: flex;
+    }
+
+    a {
+      padding: 0.5rem 1rem;
       cursor: pointer;
+      color: $color-black;
+      text-decoration: none;
+      white-space: nowrap;
+      border-radius: 8px;
+      transition: background-color 0.25s;
+
+      &:hover {
+        background-color: rgba(64, 158, 255, 0.25);
+      }
     }
   }
 }
