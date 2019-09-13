@@ -1,5 +1,5 @@
 # portfolio
-[![Netlify Status](https://api.netlify.com/api/v1/badges/4cedfbd3-a487-45ff-ba9f-a019ccbc20d4/deploy-status)](https://app.netlify.com/sites/boring-minsky-843bb7/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/4cedfbd3-a487-45ff-ba9f-a019ccbc20d4/deploy-status)](https://app.netlify.com/sites/kyushun-portfolio/deploys)
 ## Project setup
 ```
 yarn install
