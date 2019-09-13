@@ -5,7 +5,7 @@ transition(name="scroll")
       .title
         | Portfolio
       .section
-        a(href="#profile" v-smooth-scroll)
+        a(href="#profile" v-smooth-scroll="{ offset: -110 }")
           div Profile
         a(href="#jobs" v-smooth-scroll)
           div Job History
