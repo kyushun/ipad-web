@@ -29,7 +29,6 @@ export default {
 <style scoped lang="scss">
 .wrapper {
   margin: 110px auto 0;
-  //max-width: 1200px;
 }
 
 .section {
@@ -52,7 +51,7 @@ export default {
   justify-content: center;
   align-items: center;
   height: calc(100vh - 110px);
-  max-height: 900px;
+  max-height: 1080px;
   text-align: center;
 }
 </style>
