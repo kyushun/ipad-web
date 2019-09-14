@@ -19,8 +19,6 @@ export default {
 
 <style lang="scss">
 #app {
-  //font-family: "Avenir", Helvetica, Arial, sans-serif;
-  //font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', HiraginoCustom, 'Hiragino Kaku Gothic ProN', YuGothic, 'Yu Gothic Medium', Meiryo, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;

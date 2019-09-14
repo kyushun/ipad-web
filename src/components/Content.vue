@@ -2,13 +2,7 @@
   .wrapper
     Profile#profile.section
     Careers#career.section
-    //.section.content-wrapper
-      .content
-        .header
-          | Developments
     Roomee#roomee.section
-    //#development.section
-      .header Development
 </template>
 
 <script>
