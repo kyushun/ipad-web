@@ -141,7 +141,7 @@ export default {
       order: 1;
 
       .title {
-        background-image: url("/img/bg/portage.jpg");
+        background-image: url("/img/bg/rice-flower.jpg");
       }
     }
 
@@ -159,7 +159,7 @@ export default {
     color: $color-black;
     font-size: 2.5rem;
     font-weight: 700;
-    background-image: url("/img/bg/sky-blue.jpg");
+    background-image: url("/img/bg/night-sky.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 
