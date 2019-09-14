@@ -29,7 +29,7 @@ export default {
       color: rgba(0, 0, 0, 0);
       font-size: 5.5rem;
       background-color: rgb(109, 230, 245);
-      background-image: url("/img/bg/profile_text.jpg");
+      background-image: url("~@/assets/img/bg/profile_text.jpg");
       background-repeat: no-repeat;
       background-size: cover;
       background-clip: text;

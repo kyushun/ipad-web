@@ -6,13 +6,13 @@
         .detail
           | フルスタック開発の会議室サイネージシステム
       .logos
-        img(src="/img/logos/javascript.svg")
-        img(src="/img/logos/es6.svg")
-        img(src="/img/logos/nodejs.svg")
-        img(src="/img/logos/react.svg")
-        img(src="/img/logos/socketio.svg")
+        img(src="~@/assets/img/logos/javascript.svg")
+        img(src="~@/assets/img/logos/es6.svg")
+        img(src="~@/assets/img/logos/nodejs.svg")
+        img(src="~@/assets/img/logos/react.svg")
+        img(src="~@/assets/img/logos/socketio.svg")
       .s-top
-        img(src="/img/roomee/s_top.png")
+        img(src="~@/assets/img/roomee/s_top.png")
         .text
           .title
             | 急な来客でも焦る必要はありません。
@@ -24,14 +24,14 @@
             | テーブルモードでは、会議室・天気・鉄道の遅延情報が閲覧できます。
             br
             | Google Nest Hub や Amazon Echo Show のオフィス利用を想定して開発されました。
-        img(src="/img/roomee/t_top.png")
+        img(src="~@/assets/img/roomee/t_top.png")
     .pv
       .content
         | PV
         .video-wrapper
           .play-btn(v-if="!pvPlaying" v-on:click="playPV")
-            img(src="/img/play-button.svg")
-          video(poster="/img/roomee/pv-sc.jpg" src="/img/roomee/pv.mp4" v-play="pvPlaying" controlsList="nodownload")
+            img(src="~@/assets/img/play-button.svg")
+          video(poster="~@/assets/img/roomee/pv-sc.jpg" src="~@/assets/img/roomee/pv.mp4" v-play="pvPlaying" controlsList="nodownload")
 </template>
 
 <script>
@@ -129,7 +129,7 @@ export default {
       order: 1;
 
       .title {
-        background-image: url("/img/bg/roomee_s_text.jpg");
+        background-image: url("~@/assets/img/bg/roomee_s_text.jpg");
       }
     }
   }
@@ -141,7 +141,7 @@ export default {
       order: 1;
 
       .title {
-        background-image: url("/img/bg/roomee_t_text.jpg");
+        background-image: url("~@/assets/img/bg/roomee_t_text.jpg");
       }
     }
 
@@ -159,7 +159,7 @@ export default {
     color: $color-black;
     font-size: 2.5rem;
     font-weight: 700;
-    background-image: url("/img/bg/roomee_pv_bg.jpg");
+    background-image: url("~@/assets/img/bg/roomee_pv_bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 

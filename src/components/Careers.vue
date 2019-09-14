@@ -84,15 +84,15 @@ export default {
     }
 
     &.bg-tdu::before {
-      background-image: url("/img/bg/tdu_bg.jpg");
+      background-image: url("~@/assets/img/bg/tdu_bg.jpg");
     }
 
     &.bg-urban::before {
-      background-image: url("/img/bg/urban_bg.jpg");
+      background-image: url("~@/assets/img/bg/urban_bg.jpg");
     }
 
     &.bg-pixiv::before {
-      background-image: url("/img/bg/pixiv_bg.jpg");
+      background-image: url("~@/assets/img/bg/pixiv_bg.jpg");
     }
 
     .descript {
