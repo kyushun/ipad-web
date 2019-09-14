@@ -17,5 +17,22 @@
       </strong>
     </noscript>
     <div id="app"></div>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-147956404-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      var accessToken = (function() {
+        var params = new URLSearchParams(window.location.search);
+        var token = params.get("access_token");
+        if (token) {
+          localStorage.accessToken = token;
+          return token;
+        } else {
+          return localStorage.accessToken || null;
+        }
+      })();
+      gtag('js', new Date());
+      gtag('config', 'UA-147956404-1', { 'user_id': accessToken });
+    </script>
   </body>
 </html>
