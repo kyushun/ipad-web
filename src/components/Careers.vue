@@ -84,15 +84,15 @@ export default {
     }
 
     &.bg-tdu::before {
-      background-image: url("/img/bg/pale-cornflower-blue.jpg");
+      background-image: url("/img/bg/tdu_bg.jpg");
     }
 
     &.bg-urban::before {
-      background-image: url("/img/bg/prim.jpg");
+      background-image: url("/img/bg/urban_bg.jpg");
     }
 
     &.bg-pixiv::before {
-      background-image: url("/img/bg/light-sky-blue.jpg");
+      background-image: url("/img/bg/pixiv_bg.jpg");
     }
 
     .descript {

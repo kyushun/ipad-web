@@ -11,7 +11,7 @@
         img(src="/img/logos/nodejs.svg")
         img(src="/img/logos/react.svg")
         img(src="/img/logos/socketio.svg")
-      .desc1
+      .s-top
         img(src="/img/roomee/s_top.png")
         .text
           .title
@@ -78,7 +78,7 @@ export default {
   }
 
   // 共通部分
-  .desc1,
+  .s-top,
   .t-top {
     display: flex;
     flex-wrap: wrap;
@@ -116,7 +116,7 @@ export default {
   }
 
   // 個別部分
-  .desc1 {
+  .s-top {
     img {
       order: 2;
       @include mq() {
@@ -129,7 +129,7 @@ export default {
       order: 1;
 
       .title {
-        background-image: url("/img/bg/portage.jpg");
+        background-image: url("/img/bg/roomee_s_text.jpg");
       }
     }
   }
@@ -141,7 +141,7 @@ export default {
       order: 1;
 
       .title {
-        background-image: url("/img/bg/rice-flower.jpg");
+        background-image: url("/img/bg/roomee_t_text.jpg");
       }
     }
 
@@ -159,7 +159,7 @@ export default {
     color: $color-black;
     font-size: 2.5rem;
     font-weight: 700;
-    background-image: url("/img/bg/night-sky.jpg");
+    background-image: url("/img/bg/roomee_pv_bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 
