@@ -1,3 +1,5 @@
+const webpack = require("webpack");
+
 module.exports = {
   chainWebpack: config => {
     config.plugin("html").tap(options => {
@@ -10,6 +12,13 @@ module.exports = {
       };
       return options;
     });
+  },
+  configureWebpack: {
+    plugins: [
+      new webpack.DefinePlugin({
+        APP_DEPLOYED_AT: JSON.stringify(new Date())
+      })
+    ]
   },
   css: {
     loaderOptions: {
