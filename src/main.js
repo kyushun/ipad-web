@@ -58,7 +58,7 @@ if (
       footer:
         '<a href="https://www.google.com/intl/ja_jp/chrome/" target="_blank">推奨ブラウザ (Google Chrome) をダウンロードする</a>',
       showCancelButton: false,
-      confirmButtonText: "承知の上で閲覧する"
+      confirmButtonText: "同意の上で閲覧する"
     }).then(result => {
       if (result.value) {
         localStorage.confirmDeprecatedBrowser = true;
