@@ -1,6 +1,8 @@
 import Vue from "vue";
 import App from "./App.vue";
 import vueSmoothScroll from "vue2-smooth-scroll";
+import Swal from "sweetalert2";
+import UAParser from "ua-parser-js";
 
 if (process.env.NODE_ENV === "production") {
   window.dataLayer = window.dataLayer || [];
@@ -38,6 +40,34 @@ if (process.env.NODE_ENV === "production") {
     );
   }
 }
+
+window.onload = () => {
+  // 非推奨ブラウザ
+  const recommendedBrowsers = ["Blink", "WebKit", "Gecko"];
+  const ua = new UAParser();
+  if (
+    !localStorage.confirmDeprecatedBrowser &&
+    recommendedBrowsers.indexOf(ua.getEngine().name) == -1
+  ) {
+    setTimeout(() => {
+      Swal.fire({
+        type: "error",
+        width: 600,
+        title: "お使いのブラウザは対応していません",
+        html:
+          "このサイトはお使いのブラウザでの動作確認を行っておりません。<br />ページの表示が正しく行われない場合があります。",
+        footer:
+          '<a href="https://www.google.com/intl/ja_jp/chrome/" target="_blank">推奨ブラウザ (Google Chrome) をダウンロードする</a>',
+        showCancelButton: false,
+        confirmButtonText: "同意の上で閲覧する"
+      }).then(result => {
+        if (result.value) {
+          localStorage.confirmDeprecatedBrowser = true;
+        }
+      });
+    }, 1000);
+  }
+};
 
 Vue.config.productionTip = false;
 Vue.use(vueSmoothScroll, { offset: -50, updateHistory: false });

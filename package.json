@@ -20,6 +20,8 @@
   },
   "dependencies": {
     "core-js": "^2.6.5",
+    "sweetalert2": "^8.17.4",
+    "ua-parser-js": "^0.7.20",
     "vue": "^2.6.10",
     "vue2-smooth-scroll": "^1.1.0"
   },
