@@ -11,14 +11,14 @@ if (process.env.NODE_ENV === "production") {
   };
   const accessToken = (() => {
     const params = new URLSearchParams(window.location.search);
-    const token = params.get("access_token");
+    const token = params.get("at") || params.get("access_token");
     if (token) {
       localStorage.accessToken = token;
       return token;
     } else {
       if (localStorage.accessToken) {
         // URL に access_token パラムを追加
-        params.append("access_token", localStorage.accessToken);
+        params.append("at", localStorage.accessToken);
         window.history.replaceState(
           {},
           null,
