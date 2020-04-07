@@ -7,7 +7,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue, Emit } from "vue-property-decorator";
+import { Component, Vue, Emit } from 'vue-property-decorator';
 
 @Component
 export default class AppIcon extends Vue {
@@ -45,7 +45,7 @@ export default class AppIcon extends Vue {
   .icon {
     height: 100%;
     width: 100%;
-    background-image: url("../assets/icons/home.svg");
+    background-image: url('../assets/icons/home.svg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

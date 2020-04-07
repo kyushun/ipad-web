@@ -32,15 +32,15 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue, Watch } from "vue-property-decorator";
-import AppIcon from "../components/AppIcon.vue";
-import HomeIndicator from "../components/HomeIndicator.vue";
-import { routes } from "../router";
-import Point from "../lib/Point";
-import * as Const from "../lib/Const";
-import { Route } from "vue-router";
+import { Component, Vue, Watch } from 'vue-property-decorator';
+import AppIcon from '../components/AppIcon.vue';
+import HomeIndicator from '../components/HomeIndicator.vue';
+import { routes } from '../router';
+import Point from '../lib/Point';
+import * as Const from '../lib/Const';
+import { Route } from 'vue-router';
 
-type AppStatus = "Closed" | "OpenedFromHome" | "OpenedDirectly";
+type AppStatus = 'Closed' | 'OpenedFromHome' | 'OpenedDirectly';
 
 @Component({
   components: {
@@ -50,14 +50,14 @@ type AppStatus = "Closed" | "OpenedFromHome" | "OpenedDirectly";
 })
 export default class IPad extends Vue {
   private style = {
-    "--float-icon-top": "0",
-    "--float-icon-left": "0",
-    "--float-icon-background-image": "none",
-    "--float-panel-transform-origin": "none"
+    '--float-icon-top': '0',
+    '--float-icon-left': '0',
+    '--float-icon-background-image': 'none',
+    '--float-panel-transform-origin': 'none'
   };
   private initialized = false;
   private homeOpened = false;
-  private appStatus: AppStatus = "Closed";
+  private appStatus: AppStatus = 'Closed';
 
   mounted() {
     this.initialized = true;
@@ -72,13 +72,13 @@ export default class IPad extends Vue {
     }
   }
 
-  @Watch("$route", { immediate: false, deep: true })
+  @Watch('$route', { immediate: false, deep: true })
   pathChanged(to: Route) {
     if (to.name) {
       this.openApp();
     }
 
-    if (this.appOpened && (to.path == "/" || !to.name)) {
+    if (this.appOpened && (to.path == '/' || !to.name)) {
       this.closeApp();
     }
   }
@@ -93,28 +93,28 @@ export default class IPad extends Vue {
 
   get appOpened() {
     return (
-      this.appStatus == "OpenedFromHome" || this.appStatus == "OpenedDirectly"
+      this.appStatus == 'OpenedFromHome' || this.appStatus == 'OpenedDirectly'
     );
   }
 
   get appOpenedFromHome() {
-    return this.appStatus == "OpenedFromHome";
+    return this.appStatus == 'OpenedFromHome';
   }
 
   openApp($src?: Element) {
     // Float Icon
     const floatIconStyle = {};
     if ($src) {
-      this.appStatus = "OpenedFromHome";
+      this.appStatus = 'OpenedFromHome';
       const { top, left } = $src.getBoundingClientRect();
       Object.assign(floatIconStyle, {
-        "--float-icon-top": top + window.pageYOffset + "px",
-        "--float-icon-left": left + window.pageXOffset + "px",
-        "--float-icon-background-image": ($src as HTMLElement).style
+        '--float-icon-top': top + window.pageYOffset + 'px',
+        '--float-icon-left': left + window.pageXOffset + 'px',
+        '--float-icon-background-image': ($src as HTMLElement).style
           .backgroundImage
       });
     } else {
-      this.appStatus = "OpenedDirectly";
+      this.appStatus = 'OpenedDirectly';
       $src = this.$refs.home as HTMLElement;
     }
 
@@ -125,7 +125,7 @@ export default class IPad extends Vue {
     const translateX = -($ipad.getCenterPoint().x - $src.getCenterPoint().x);
     const translateY = -($ipad.getCenterPoint().y - $src.getCenterPoint().y);
     Object.assign(this.style, floatIconStyle, {
-      "--float-panel-transform-origin": `matrix(
+      '--float-panel-transform-origin': `matrix(
             ${scaleX}, 0, 0,
             ${scaleY}, ${translateX}, ${translateY}
           )`
@@ -133,7 +133,7 @@ export default class IPad extends Vue {
   }
 
   closeApp() {
-    this.appStatus = "Closed";
+    this.appStatus = 'Closed';
   }
 
   getAppCenterPosition(index: number) {
@@ -186,7 +186,7 @@ export default class IPad extends Vue {
   overflow: hidden;
   height: 100%;
   width: 100%;
-  background-image: url("../assets/ipadwall.jpg");
+  background-image: url('../assets/ipadwall.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

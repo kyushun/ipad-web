@@ -79,8 +79,8 @@
 </template>
 
 <script lang="ts">
-import { Vue, Component } from "vue-property-decorator";
-import Article from "../components/Article/Article.vue";
+import { Vue, Component } from 'vue-property-decorator';
+import Article from '../components/Article/Article.vue';
 
 @Component({
   components: {
@@ -145,7 +145,7 @@ export default class OfficeEcho extends Vue {
       height: calc(576 / 2230 * 350px);
       background-repeat: none;
       background-size: 100% auto;
-      background-image: url("../assets/oe/oe_logo.png");
+      background-image: url('../assets/oe/oe_logo.png');
 
       @include mq(sp) {
         margin: 40px auto 0;
@@ -166,7 +166,7 @@ export default class OfficeEcho extends Vue {
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center center;
-      background-image: url(../assets/oe/oe_viewer.png);
+      background-image: url('../assets/oe/oe_viewer.png');
 
       @include mq(md) {
         width: 90%;
@@ -188,7 +188,7 @@ export default class OfficeEcho extends Vue {
       background-size: cover;
       background-repeat: no-repeat;
       background-position: top left;
-      background-image: url(../assets/oe/oe_table.png);
+      background-image: url('../assets/oe/oe_table.png');
       transition: width 1s;
     }
   }
@@ -276,21 +276,21 @@ export default class OfficeEcho extends Vue {
         width: 108px;
         height: 46px;
         background-size: 108px 46px;
-        background-image: url(../assets/oe/caption-next.png);
+        background-image: url('../assets/oe/caption-next.png');
       }
 
       &-ui {
         width: 141px;
         height: 46px;
         background-size: 141px 46px;
-        background-image: url(../assets/oe/caption-ui.png);
+        background-image: url('../assets/oe/caption-ui.png');
       }
 
       &-info {
         width: 135px;
         height: 44px;
         background-size: 135px 44px;
-        background-image: url(../assets/oe/caption-info.png);
+        background-image: url('../assets/oe/caption-info.png');
       }
     }
 
@@ -300,7 +300,7 @@ export default class OfficeEcho extends Vue {
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center center;
-      background-image: url(../assets/oe/oe_viewer.png);
+      background-image: url('../assets/oe/oe_viewer.png');
 
       @include mq(md) {
         width: 730px;
@@ -397,7 +397,7 @@ export default class OfficeEcho extends Vue {
       &-image {
         width: 280px;
         height: calc(2140 / 1076 * 280px);
-        background-image: url(../assets/oe/oe_sp.png);
+        background-image: url('../assets/oe/oe_sp.png');
 
         @include mq(sp) {
           margin: auto;
@@ -408,7 +408,7 @@ export default class OfficeEcho extends Vue {
         margin: 1em auto 0;
         width: 96px;
         height: 21px;
-        background-image: url(../assets/oe/caption-sp.png);
+        background-image: url('../assets/oe/caption-sp.png');
       }
     }
 
@@ -422,7 +422,7 @@ export default class OfficeEcho extends Vue {
       &-image {
         width: 1080px;
         height: calc(1312 / 1708 * 1080px);
-        background-image: url(../assets/oe/oe_table.png);
+        background-image: url('../assets/oe/oe_table.png');
 
         @include mq(sp) {
           width: 100%;
@@ -435,7 +435,7 @@ export default class OfficeEcho extends Vue {
         margin: 1em auto 0;
         width: 125px;
         height: 23px;
-        background-image: url(../assets/oe/caption-tab.png);
+        background-image: url('../assets/oe/caption-tab.png');
 
         @include mq(md) {
           margin-left: 240px;

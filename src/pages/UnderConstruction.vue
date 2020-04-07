@@ -8,8 +8,8 @@
 </template>
 
 <script lang="ts">
-import { Vue, Component } from "vue-property-decorator";
-import Article from "../components/Article/Article.vue";
+import { Vue, Component } from 'vue-property-decorator';
+import Article from '../components/Article/Article.vue';
 
 @Component({
   components: {

@@ -1,4 +1,4 @@
-import Point from "./Point";
+import Point from './Point';
 
 declare global {
   interface Element {
