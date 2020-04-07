@@ -3,6 +3,7 @@ import VueRouter from 'vue-router';
 import UnderConstruction from './pages/UnderConstruction.vue';
 import About from './pages/About.vue';
 import OfficeEcho from './pages/OfficeEcho.vue';
+import Gifizer from './pages/Gifizer.vue';
 
 Vue.use(VueRouter);
 
@@ -22,7 +23,7 @@ export const routes = [
   {
     name: 'Gifizer',
     path: '/gifizer',
-    component: UnderConstruction,
+    component: Gifizer,
     icon: require('./assets/icons/gifizer.png')
   },
   {
