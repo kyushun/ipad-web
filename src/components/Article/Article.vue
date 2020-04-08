@@ -1,8 +1,8 @@
 <template>
   <div class="article">
-    <div class="article__header">
+    <header class="article__header">
       <div class="article__header-title">{{ title }}</div>
-    </div>
+    </header>
     <div class="article__content">
       <slot></slot>
     </div>

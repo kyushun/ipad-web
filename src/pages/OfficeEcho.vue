@@ -63,7 +63,7 @@
         OSSとして公開する予定ですのでセキュリティの観点や機能拡張の観点からも安心してお使いいただけます。
       </p>
     </section>
-    <section class="oe__footnote">
+    <footer class="oe__footnote">
       <ul>
         <li>提供・公開日時は未定です</li>
         <li>
@@ -74,7 +74,7 @@
         <li>画像は開発中のものです。</li>
         <li>仕様は予告なく変更することがあります。</li>
       </ul>
-    </section>
+    </footer>
   </Article>
 </template>
 

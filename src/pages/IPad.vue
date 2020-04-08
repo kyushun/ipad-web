@@ -1,6 +1,6 @@
 <template>
   <div id="ipad" ref="ipad" :style="style">
-    <div class="home" ref="home" :class="{ 'app-opened': appOpened }">
+    <nav class="home" ref="home" :class="{ 'app-opened': appOpened }">
       <template v-if="initialized">
         <AppIcon
           v-for="(app, i) of apps"
@@ -18,15 +18,15 @@
           {{ app.name }}
         </AppIcon>
       </template>
-    </div>
+    </nav>
     <transition name="float-icon">
       <AppIcon v-if="appOpenedFromHome" class="float-icon"></AppIcon>
     </transition>
     <transition name="float-panel">
-      <div v-if="appOpened" class="float-panel">
+      <main v-if="appOpened" class="float-panel">
         <router-view></router-view>
         <HomeIndicator @click="closeApp"></HomeIndicator>
-      </div>
+      </main>
     </transition>
   </div>
 </template>
