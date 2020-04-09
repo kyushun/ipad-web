@@ -194,7 +194,7 @@ export default class IPad extends Vue {
   overflow: hidden;
   height: 100%;
   width: 100%;
-  background-image: url('../assets/ipadwall.jpg');
+  background-image: url('../assets/wallpaper-home.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

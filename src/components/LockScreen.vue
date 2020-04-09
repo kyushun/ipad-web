@@ -60,8 +60,9 @@ export default class LockScreen extends Vue {
   height: 100%;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   background-color: #000;
-  background-image: url('../assets/wallpaper.jpg');
+  background-image: url('../assets/wallpaper-lock.jpg');
   z-index: 30000;
   transition: transform 0.75s;
   will-change: transform;
