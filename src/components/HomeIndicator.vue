@@ -27,15 +27,19 @@ export default class AppIcon extends Vue {
   transform-origin: center;
   width: 30px;
   height: 30px;
+  background-color: #fff;
   border: solid 4px #222;
   border-radius: 50%;
-  transition: all 0.25s;
+  opacity: 0.5;
+  transition-property: width, height, opacity;
+  transition-duration: 0.25s;
   box-sizing: content-box;
   z-index: 10000;
 
   &:hover {
     width: 35px;
     height: 35px;
+    opacity: 1;
   }
 
   &-link {
