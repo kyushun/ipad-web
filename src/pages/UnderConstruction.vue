@@ -1,8 +1,7 @@
 <template>
   <Article :title="$route.name">
     <div class="not-found">
-      <h1 class="under-construction">Under Construction</h1>
-      <h1 class="comming-soom">Coming Soon</h1>
+      <figure class="not-found-image"></figure>
     </div>
   </Article>
 </template>
@@ -21,16 +20,21 @@ export default class UnderConstruction extends Vue {}
 
 <style scoped lang="scss">
 .not-found {
-  padding: 3rem;
-  text-align: center;
-  background: rgb(246, 216, 73);
-  text-transform: uppercase;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ddd;
 
-  .under-construction {
-    display: inline-block;
-    padding: 0 0.75em;
-    color: rgb(246, 216, 73);
-    background: rgb(0, 0, 0);
+  &-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 75px;
+    height: 75px;
+    background-image: url('../assets/404.svg');
+    transform: translate(-50%, -50%);
   }
 }
 </style>
