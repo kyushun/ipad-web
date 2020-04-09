@@ -229,6 +229,7 @@ export default class IPad extends Vue {
   border-radius: 0;
   opacity: 0;
   z-index: 100;
+  will-change: animation, opacity, top, left, width, height, border-radius;
 
   &-leave-active {
     animation-name: float-icon-close;
@@ -266,6 +267,7 @@ export default class IPad extends Vue {
   background-color: white;
   border-radius: 0;
   z-index: 1000;
+  will-change: animation, transform, opacity, border-radius;
 
   &-enter-active {
     overflow: hidden;
