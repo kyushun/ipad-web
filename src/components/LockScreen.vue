@@ -82,7 +82,7 @@ export default class LockScreen extends Vue {
     background-position: 0px 0px;
     background-repeat: no-repeat;
     background-image: url('../assets/padlock.png');
-    animation: padlock-open 0.4s steps(1) 1s forwards;
+    animation: padlock-open 0.4s steps(1) 0.75s forwards;
     animation-play-state: running;
 
     @keyframes padlock-open {
@@ -183,7 +183,23 @@ export default class LockScreen extends Vue {
     text-align: center;
     white-space: nowrap;
     text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.75);
-    transform: translateX(-50%);
+    transform: translate(-50%, 0);
+    animation-name: to-unlock-bound;
+    animation-duration: 4s;
+    animation-play-state: running;
+    animation-iteration-count: infinite;
+
+    @keyframes to-unlock-bound {
+      75% {
+        transform: translate(-50%, 0);
+      }
+      87.5% {
+        transform: translate(-50%, -10px);
+      }
+      100% {
+        transform: translate(-50%, 0);
+      }
+    }
 
     .small {
       font-size: 0.8em;
