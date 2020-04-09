@@ -7,6 +7,8 @@ import Gifizer from './pages/Gifizer.vue';
 
 Vue.use(VueRouter);
 
+export const PAGE_TITLE = 'Yushun Kotani';
+
 export const routes = [
   {
     name: 'About me',
@@ -53,6 +55,15 @@ export const routes = [
 
 const router = new VueRouter({
   routes
+});
+
+router.beforeEach((to, _from, next) => {
+  if (to.name) {
+    window.document.title = `${to.name} - ${PAGE_TITLE}`;
+  } else {
+    window.document.title = PAGE_TITLE;
+  }
+  next();
 });
 
 export default router;
