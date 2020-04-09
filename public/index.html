@@ -8,8 +8,12 @@
     <link rel="icon" type="image/x-icon" href="<%= BASE_URL %>favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="<%= BASE_URL %>apple-touch-icon-180x180.png">
     <title>Yushun Kotani</title>
+    <link href="/loader.svg" rel=preload as=image >
   </head>
-  <body>
+  <body class="no-scroll">
+    <div id="loader">
+      <figure class="loader-image"></figure>
+    </div>
     <noscript>
       <strong>We're sorry but this site doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>

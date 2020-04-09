@@ -37,6 +37,10 @@ body,
 body {
   cursor: url('./assets/cursor.png'), auto;
   color: #333;
+
+  &.no-scroll {
+    overflow: hidden;
+  }
 }
 
 h1,
@@ -46,5 +50,36 @@ h4,
 h5,
 h6 {
   color: #111;
+}
+
+#loader {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 50000;
+  transition: opacity 0.75s;
+
+  &.loaded {
+    opacity: 0;
+
+    .loader-image {
+      opacity: 0;
+    }
+  }
+
+  .loader-image {
+    width: 75px;
+    height: 75px;
+    background-image: url('/loader.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: opacity 0.2s;
+  }
 }
 </style>

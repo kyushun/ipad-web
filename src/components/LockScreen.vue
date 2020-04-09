@@ -1,6 +1,9 @@
 <template>
   <div class="lockscreen" @click="click">
-    <figure class="padlock"></figure>
+    <figure
+      class="padlock"
+      :style="{ 'animation-play-state': loaded ? 'running' : 'paused' }"
+    ></figure>
     <div class="clock">{{ time }}</div>
     <div class="date">{{ date }}</div>
     <div class="to-unlock">
@@ -15,6 +18,7 @@ import { Vue, Component, Emit } from 'vue-property-decorator';
 
 @Component({})
 export default class LockScreen extends Vue {
+  private loaded = false;
   private date = '';
   private time = '';
   private tick: number | undefined;
@@ -25,6 +29,10 @@ export default class LockScreen extends Vue {
   created() {
     this.setDate();
     this.setTime();
+
+    window.addEventListener('load', () => {
+      this.loaded = true;
+    });
   }
 
   mounted() {
@@ -84,7 +92,7 @@ export default class LockScreen extends Vue {
     background-repeat: no-repeat;
     background-image: url('../assets/padlock.png');
     animation: padlock-open 0.4s steps(1) 0.75s forwards;
-    animation-play-state: running;
+    animation-play-state: paused;
 
     @keyframes padlock-open {
       0% {
