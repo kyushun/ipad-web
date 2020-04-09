@@ -1,5 +1,11 @@
 <template>
   <div id="ipad" ref="ipad" :style="style">
+    <transition name="lockscreen">
+      <LockScreen
+        v-if="!$route.name && !homeOpened"
+        @click="openHome"
+      ></LockScreen>
+    </transition>
     <nav class="home" ref="home" :class="{ 'app-opened': appOpened }">
       <template v-if="initialized">
         <AppIcon
@@ -33,6 +39,7 @@
 
 <script lang="ts">
 import { Component, Vue, Watch } from 'vue-property-decorator';
+import LockScreen from '../components/LockScreen.vue';
 import AppIcon from '../components/AppIcon.vue';
 import HomeIndicator from '../components/HomeIndicator.vue';
 import { routes } from '../router';
@@ -44,6 +51,7 @@ type AppStatus = 'Closed' | 'OpenedFromHome' | 'OpenedDirectly';
 
 @Component({
   components: {
+    LockScreen,
     AppIcon,
     HomeIndicator
   }
@@ -65,10 +73,6 @@ export default class IPad extends Vue {
     if (this.$route.name) {
       this.homeOpened = true;
       this.openApp();
-    } else {
-      requestAnimationFrame(() => {
-        this.homeOpened = true;
-      });
     }
   }
 
@@ -99,6 +103,10 @@ export default class IPad extends Vue {
 
   get appOpenedFromHome() {
     return this.appStatus == 'OpenedFromHome';
+  }
+
+  openHome() {
+    this.homeOpened = true;
   }
 
   openApp($src?: Element) {
