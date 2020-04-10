@@ -1,5 +1,5 @@
 # portfolio
-[![Netlify Status](https://api.netlify.com/api/v1/badges/4cedfbd3-a487-45ff-ba9f-a019ccbc20d4/deploy-status)](https://app.netlify.com/sites/kyushun-portfolio/deploys)
+
 ## Project setup
 ```
 yarn install
@@ -7,22 +7,17 @@ yarn install
 
 ### Compiles and hot-reloads for development
 ```
-yarn run serve
+yarn serve
 ```
 
 ### Compiles and minifies for production
 ```
-yarn run build
-```
-
-### Run your tests
-```
-yarn run test
+yarn build
 ```
 
 ### Lints and fixes files
 ```
-yarn run lint
+yarn lint
 ```
 
 ### Customize configuration

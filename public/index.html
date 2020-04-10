@@ -7,17 +7,18 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="<%= BASE_URL %>favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="<%= BASE_URL %>apple-touch-icon-180x180.png">
-    <title>Yushun Kotani's Portfolio</title>
-    <link href="https://www.googletagmanager.com/gtag/js?id=UA-147956404-1" rel="preload" as="script">
+    <title>Yushun Kotani</title>
+    <link href="/loader.svg" rel=preload as=image >
+    <link href="/fonts/noto-sans-jp-v25-japanese_latin-regular.woff2" rel="preload" as="font" crossorigin>
+    <link href="/fonts/noto-sans-jp-v25-japanese_latin-700.woff2" rel="preload" as="font" crossorigin>
   </head>
-  <body>
+  <body class="no-scroll">
+    <div id="loader">
+      <figure class="loader-image"></figure>
+    </div>
     <noscript>
-      <strong>
-        このサイトは Javascript が利用できないブラウザでは閲覧することができません。<br />
-        <a href="https://www.google.com/intl/ja_jp/chrome/" target="_blank">最新のブラウザ</a>を使用するか、Javascript を有効にしてください。
-      </strong>
+      <strong>We're sorry but this site doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
     <div id="app"></div>
-    <script src="https://www.googletagmanager.com/gtag/js?id=UA-147956404-1"></script>
   </body>
 </html>
