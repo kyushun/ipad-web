@@ -55,7 +55,7 @@ export default class About extends Vue {}
 
     &-unv {
       font-size: 28px;
-      font-weight: 600;
+      font-weight: 700;
       text-align: center;
 
       @include mq() {
@@ -66,7 +66,7 @@ export default class About extends Vue {}
     &-name {
       margin-top: 0.4em;
       font-size: 96px;
-      font-weight: 600;
+      font-weight: 700;
       line-height: 1;
       text-align: center;
 

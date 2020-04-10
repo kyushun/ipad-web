@@ -115,7 +115,7 @@ export default class Gifizer extends Vue {}
     &-text {
       display: inline;
       font-size: 21px;
-      font-weight: 600;
+      font-weight: 700;
     }
   }
 

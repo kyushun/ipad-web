@@ -70,7 +70,7 @@ export default class AppIcon extends Vue {
     left: 50%;
     color: rgb(255, 255, 255);
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 700;
     text-shadow: 0px 0px 11px rgba(0, 0, 0, 0.2);
     white-space: nowrap;
     transform: translateX(-50%);

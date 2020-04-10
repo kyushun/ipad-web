@@ -41,7 +41,7 @@ export default class Article extends Vue {
       max-width: 980px;
       margin: 0 auto;
       font-size: 21px;
-      font-weight: bold;
+      font-weight: 700;
       line-height: 55px;
       letter-spacing: -0.5px;
     }

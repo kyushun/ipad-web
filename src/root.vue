@@ -26,6 +26,23 @@ export default class Root extends Vue {
 </script>
 
 <style lang="scss">
+/* noto-sans-jp-regular - japanese_latin */
+@font-face {
+  font-family: 'Noto Sans JP';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Noto Sans Japanese Regular'), local('NotoSansJapanese-Regular'),
+    url('/fonts/noto-sans-jp-v25-japanese_latin-regular.woff2') format('woff2');
+}
+/* noto-sans-jp-700 - japanese_latin */
+@font-face {
+  font-family: 'Noto Sans JP';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Noto Sans Japanese Bold'), local('NotoSansJapanese-Bold'),
+    url('/fonts/noto-sans-jp-v25-japanese_latin-700.woff2') format('woff2');
+}
+
 html,
 body,
 #app {
@@ -35,6 +52,8 @@ body,
 }
 
 body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, Roboto, 'Noto Sans JP',
+    sans-serif;
   cursor: url('./assets/cursor.png'), auto;
   color: #333;
 
