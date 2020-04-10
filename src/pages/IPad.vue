@@ -2,7 +2,7 @@
   <div id="ipad" ref="ipad" :style="style">
     <transition name="lockscreen">
       <LockScreen
-        v-if="!$route.name && !homeOpened"
+        v-if="!this.isAccessedToApp && !homeOpened"
         @click="openHome"
       ></LockScreen>
     </transition>
@@ -70,10 +70,21 @@ export default class IPad extends Vue {
   mounted() {
     this.initialized = true;
 
-    if (this.$route.name) {
+    if (this.isAccessedToApp) {
       this.homeOpened = true;
       this.openApp();
     }
+
+    let resizeTimer: number | undefined;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimer);
+
+      resizeTimer = setTimeout(() => {
+        if (this.appOpenedFromHome) {
+          this.openApp();
+        }
+      }, 500);
+    });
   }
 
   @Watch('$route', { immediate: false, deep: true })
@@ -93,6 +104,10 @@ export default class IPad extends Vue {
 
   get apps() {
     return routes;
+  }
+
+  get isAccessedToApp() {
+    return !!this.$route.name;
   }
 
   get appOpened() {
